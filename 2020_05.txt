@@ -1,0 +1,217 @@
+
+
+----------==========----------==========----------==========----------
+
+
+"Eat Your Own Catfood."
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/05/30
+
+
+BUGFIX
+
+
+	Nonnon Paint
+		Menu : "0 : Used Colors"
+			OLD : hang-up
+			NEW : fixed
+		Multi-Layer : Resizer
+			OLD : not working in some cases
+			NEW : fixed
+		Multi-Layer : Grabber : Quick Stretch
+			OLD : not supported
+			NEW : fixed
+		Multi-Layer : Menu : Rename
+			OLD : confusion occurs in some cases
+			NEW : fixed
+			[!] : when selected by menu click
+		Color History : window size : High-DPI
+			OLD : too large
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	neutral/bmp/detect.c
+		n_bmp_usedcolors_detect()
+			NEW : removed
+			[?] : broken
+			[!] : fixed code is moved to Nonnon Paint
+
+	win32/win_txtbox.c
+		renamed
+			OLD : N_WIN_TXTBOX_OPTION_LISTBOX_BOLDTXT
+			NEW : N_WIN_TXTBOX_OPTION_LISTBOX_EFFECTS
+
+	Felis
+		Select2Go
+			OLD : Startpage.com
+			NEW : Wikipedia EN
+			[?] : startpage is ruled by an add company
+	Nonnon Paint
+		Resizer : Symmetry
+			NEW : removed
+			[?] : broken
+		Menu
+			NEW : some assigns are changed
+		Multi-Layer
+			NEW : many features are added
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/05/20
+
+
+BUGFIX
+
+
+	win32/win_checkbox.c
+		High-DPI : margin
+			OLD : inaccurate
+			NEW : fixed
+		n_win_check_draw()
+			OLD : memory leak
+			NEW : fixed
+	win32/win_radiobutton.c
+		High-DPI : margin
+			OLD : inaccurate
+			NEW : fixed
+		n_win_radio_draw()
+			OLD : memory leak
+			NEW : fixed
+
+	Nonnon Paint
+		Multi-Layer : Renamer : cursor
+			OLD : arrow
+			NEW : ibeam
+		Multi-Layer : TxtBox : Menu : redraw when selected
+			OLD : update is delayed
+			NEW : fixed
+		Multi-Layer : Resizer : Preview
+			OLD : inaccurate
+			NEW : fixed
+		Multi-Layer : some filters
+			OLD : not working
+			NEW : fixed
+		Shift2Zoom
+			OLD : font is too tiny
+			NEW : fixed
+			[x] : NEW_FEATURE @ 2020/05/10
+	OrangeCat
+		Key Bindings : Delete
+			OLD : no responce except for scroll pager
+			NEW : patched
+			[?] : scroll pager has focus
+
+
+NEW_FEATURE
+
+
+	win32/win_txtbox.c
+		N_WIN_TXTBOX_OPTION_LISTBOX_BOLDTXT
+			NEW : some more options available
+			[!] : usage is changed
+
+	Nonnon Paint
+		Canvas : alpha background
+			NEW : checker available
+			[?] : for preventing alpha value misuse
+		Menu : "4 : Frame"
+			NEW : integrated with Grid
+		Menu : "4 : Thumbnail"
+			NEW : you can turn off thumbnail feature
+		Multi-Layer : Blur
+			NEW : you can make focus blur
+		Multi-Layer : Grabber : Layer Window : Shift + Click
+			NEW : move a grabbed area between layers
+		Multi-Layer : Grabber : Menu : "Move Here"
+			NEW : move a grabbed area between layers
+	OrangeCat
+		Hover2Tooltip : when a tip is hovered
+			NEW : disappear
+		Item View : DnD : new files
+			NEW : fading available
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/05/10
+
+
+BUGFIX
+
+
+	win32/win_checkbox.c
+		n_win_check_onoff()
+			OLD : misbehave
+			NEW : fixed
+	win32/win_radiobutton.c
+		n_win_radio_onoff()
+			OLD : misbehave
+			NEW : fixed
+	win32/win_txtbox/24_subclass.c
+		ONELINE : n_win_txtbox_caret_on_timer()
+			OLD : redraw error
+			NEW : fixed
+	win32/win_txtbox.c
+		N_WIN_TXTBOX_OPTION_LISTBOX_KEEPSEL
+			OLD : last line + 1 is inputtable
+			NEW : fixed
+
+	Nonnon Paint
+		child windows : when appear
+			OLD : not smooth
+			NEW : fixed
+		Grabber : Space key
+			OLD : re-grab
+			NEW : reserved for straight pen input
+			[!] : use Ctrl+C
+		Readme : Grabber : explanation
+			OLD : inaccurate
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	neutral/curico.c
+		n_curico_bmp_load_onmemory() : when indexed color
+			NEW : faster than older
+
+	Nonnon Paint
+		Multi-Layer
+			NEW : layer implementation
+		Thumbnail
+			NEW : faster than older
+		Tool Window : initial position
+			OLD : 100px
+			NEW : 10% of desktop
+		Grabber : underlay
+			NEW : deprecated
+			[?] : too complicated
+			[?] : use layer
+		GrabNDrag : thumbnail
+			OLD : disappear for performance
+			NEW : appear
+			[?] : lighter than older
+
+
+----------==========----------==========----------==========----------
+
