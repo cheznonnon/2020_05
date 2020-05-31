@@ -12,6 +12,23 @@
 Change Log
 
 
+2020/05/31 : 2020/05/30 #1
+
+
+BUGFIX
+
+	Nonnon Paint
+		readme
+			OLD : there are inaccurate phrases
+			NEW : fixed
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2020/05/30
 
 
